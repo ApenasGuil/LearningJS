@@ -1,4 +1,4 @@
-Usarei este Readme como caderno de anotações sobre a aula 09
+Usarei este Readme como caderno de anotações sobre a aula 09 e 10
 
 ## DOM
 
