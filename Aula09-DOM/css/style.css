@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(68, 125, 199);
+}
+
+h1 {
+    color: white;
+    background-color: rgb(56, 110, 180);
+    font: normal 17pt Arial;
+}
