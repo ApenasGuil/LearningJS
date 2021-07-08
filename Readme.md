@@ -60,4 +60,8 @@ function saiu() {
     a.style.background = 'green';
 }
 
-## 
+## Utilizar emojis no JS
+Acessar https://unicode.org/emoji/charts/full-emoji-list.html
+
+Alterar o código de 'U+1F600' para '\u{1F600}'
+(U+ se torna \u{})

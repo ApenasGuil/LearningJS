@@ -1,0 +1,42 @@
+:root{
+    --main-color: rgb(162, 33, 221);
+    --sec-color: rgb(120, 21, 167);
+    --ter-color: rgb(225, 182, 245);
+    --light-color: white;
+}
+
+header {
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
+footer {
+    background-color: var(--main-color);
+    /* color: var(--sec-color); */
+    text-align: center;
+    padding-top: 5px;
+}
+
+footer>p{
+    display: inline;
+    position: relative;
+    margin: 10px;
+    font-size: 30px;
+}
+
+footer>p>a{
+    text-decoration: none;
+    color: var(--sec-color);
+}
+
+footer>a:visited {
+    text-decoration: none;
+}
+
+footer>a:link {
+    text-decoration: none;
+}
+
+footer>p>a:hover{
+    color: var(--ter-color);
+}
