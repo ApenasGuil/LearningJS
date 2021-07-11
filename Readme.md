@@ -1,5 +1,15 @@
 > Usarei este Readme como caderno de anotações sobre todo o curso e meu aprendizado de JavaScript, sempre mantendo padrões e seguindo o máximo de boas práticas possíveis. Sintam-se livres para me corrigir caso algo ou alguma descrição esteja incorreto. :grin:
 
+#### Básico
+
+```javascript
+var n1 = Number(window.prompt('Digite um número: '));
+var n2 = Number(window.prompt('Digite outro número: '));
+var s = n1 + n2;
+
+window.alert(`Soma entre ${n1} e ${n2} é igual a ${s}`);
+```
+
 #### DOM
 
 DOM -> Modelo de Documento para Objetos
@@ -44,9 +54,9 @@ Eventos do mouse: mouseenter, mousemove, mousedown, mouseup, click, mouseout
 
 ```javascript
 var a = window.document.querySelector('div#area');
-a.addEventListener('click', clicar)
-a.addEventListener('mouseenter', entrar)
-a.addEventListener('mouseout', saiu)
+a.addEventListener('click', clicar);
+a.addEventListener('mouseenter', entrar);
+a.addEventListener('mouseout', saiu);
 
 function clicar() {
     a.innerText = 'Clicou!';
@@ -74,19 +84,20 @@ Alterar o código de 'U+1F600' para '\u{1F600}'
 
 ```javascript
 let n = Number(num.value);
-    for(let i = 0; i <= 10; i++){
-        let item = document.createElement('option');
-        item.text = `${n} x ${i} = ${n*i}`; //template string
-        item.value = `tab${i}`;
-        tab.appendChild(item);
-        // .appendChild = Associa uma propriedade à uma tag
+for(let i = 0; i <= 10; i++){
+    let item = document.createElement('option');
+    item.text = `${n} x ${i} = ${n*i}`; //template string
+    item.value = `tab${i}`;
+    tab.appendChild(item);
+    // .appendChild = Associa uma propriedade à uma tag
     }
 ```
 
 #### Variáveis compostas
 
-Adicionar mais informação num vetor
+##### Exemplos com vetores
 
+Adicionar mais informação num vetor
 ```javascript
 let num = [5,8,4]; //0=5; 1=8; 2=4;
 num[3] = 6; //0=5; 1=8; 2=4; 3=6;
@@ -95,7 +106,7 @@ num.length; //atributo que mostra quantos elementos há em determinado vetor
 num.sort(); //reorganiza os elementos em ordem crescente
 ```
 
-```node
+```javascript
 let num = [5, 8, 2, 9, 3];
 num.push(1); //[5, 8, 2, 9, 3, 1]
 num.sort(); //[ 1, 2, 3, 5, 8, 9 ]
@@ -106,11 +117,42 @@ console.log(`O primeiro valor do vetor é ${num[0]}.`);
 
 ```javascript
 for(let i = 0; i <= num.length; i++){ ... }
-// Maneira simplificada do for() segundo o EcmaScript
+// Maneira simplificada do for() scegundo o EcmaScript
 for(let i in num){ ... }
 ```
 
 ```javascript
 let index = num.indexOf(2); // Busca o valor no Vetor
 console.log(index); // Retorna -1 caso não encontre
+```
+
+#### Funções com parâmetro
+
+```javascript
+function parimp(n) {
+    if (n % 2 == 0) {
+        return 'par';
+    } else {
+        return 'impar';
+    }
+}
+
+console.log(parimp(10));
+```
+
+```javascript
+function soma(n1=0, n2=0) { // Define os valores default, caso paramêtro não seja passado
+    let res = n1 + n2;
+    return `${n1} + ${n2} = ${res}`;
+}
+
+console.log(soma(3, 5));
+```
+
+```javascript
+let funct = function(x) { // Armazenar function dentro de variável
+    return x*2;
+}
+
+console.log(funct(2));
 ```
